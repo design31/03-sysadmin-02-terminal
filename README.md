@@ -7,7 +7,8 @@
 3. Какой процесс с PID `1` является родителем для всех процессов в вашей виртуальной машине Ubuntu 20.04?  
 
 vagrant@vagrant:~$ pstree -p  говорит что это systemd  
-```vagrant@vagrant:~$ pstree -p
+```
+vagrant@vagrant:~$ pstree -p
 systemd(1)─┬─VBoxService(798)─┬─{VBoxService}(800)
            │                  ├─{VBoxService}(801)
            │                  ├─{VBoxService}(802)
