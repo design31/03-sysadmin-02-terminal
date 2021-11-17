@@ -27,9 +27,6 @@ systemd(1)─┬─VBoxService(798)─┬─{VBoxService}(800)
            │                  └─{VBoxService}(808)
            ├─accounts-daemon(577)─┬─{accounts-daemon}(609)
            │                      └─{accounts-daemon}(642)
-
----
-
 4. Как будет выглядеть команда, которая перенаправит вывод stderr `ls` на другую сессию терминала?  
 
 Смотрим номер своего терминала:
