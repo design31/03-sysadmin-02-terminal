@@ -57,9 +57,9 @@ grep      2498                       vagrant    1u      CHR              136,0  
 grep      2498                       vagrant    2u      CHR              136,0      0t0          3 /dev/pts/0
 ```
 
-Выводим в другой:
+Выводим ошибку в другой терминал:
 ```
-vagrant@vagrant:~$ ls > /dev/pts/1
+vagrant@vagrant:~$ ls <несуществ директория> 2>/dev/pts/1
 ```
 
 ---
