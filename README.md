@@ -27,12 +27,17 @@ systemd(1)─┬─VBoxService(798)─┬─{VBoxService}(800)
            │                  └─{VBoxService}(808)
            ├─accounts-daemon(577)─┬─{accounts-daemon}(609)
            │                      └─{accounts-daemon}(642)
+```
+
+---
+
 4. Как будет выглядеть команда, которая перенаправит вывод stderr `ls` на другую сессию терминала?  
 
 Смотрим номер своего терминала:
 ```
 vagrant@vagrant:~$ tty
 /dev/pts/0
+```
 
 Смотрим список открытых терминалов:
 ```
@@ -50,7 +55,12 @@ lsof      2497                       vagrant    0u      CHR              136,0  
 lsof      2497                       vagrant    2u      CHR              136,0      0t0          3 /dev/pts/0
 grep      2498                       vagrant    1u      CHR              136,0      0t0          3 /dev/pts/0
 grep      2498                       vagrant    2u      CHR              136,0      0t0          3 /dev/pts/0
+```
 
 Выводим в другой:
+```
+vagrant@vagrant:~$ ls > /dev/pts/1
+```
 
-ls > dev pts1
+---
+
