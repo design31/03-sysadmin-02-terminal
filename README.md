@@ -103,5 +103,23 @@ pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx rdrand hypervisor lahf_lm a
 
 ---
 
- 
+ ## 12. При открытии нового окна терминала и vagrant ssh создается новая сессия и выделяется pty. Это можно подтвердить командой tty, которая упоминалась в лекции 3.2. Однако:
+```
+vagrant@netology1:~$ ssh localhost 'tty'
+not a tty
+```
+Почитайте, почему так происходит, и как изменить поведение. 
+
+При отправке команд по ssh псевдотерминал по умолчанию не создаётся, поэтомы мы получаем такую ошибку. Принудительно создать tty можно ключом `-t`,  втаком случае команда создает tty и показывает его номер:
+```
+vagrant@vagrant:~$ ssh -t localhost tty
+vagrant@localhost's password:
+/dev/pts/3
+Connection to localhost closed.
+```
+
+---
+
+
+
  
